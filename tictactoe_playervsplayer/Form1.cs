@@ -15,6 +15,20 @@ namespace tictactoe_playervsplayer
         public Form1()
         {
             InitializeComponent();
+
+            Random random = new Random();
+            int losuj = random.Next(2);
+
+            if (losuj != 1)
+            {
+                Kolejka = 0;
+                lblKolejkaActive.Text = "Zaczyna O";
+            }
+            else
+            {
+                Kolejka = 1;
+                lblKolejkaActive.Text = "Zaczyna X";
+            }
         }
 
         private int kolejka;
@@ -118,8 +132,20 @@ namespace tictactoe_playervsplayer
 
         public void RestartGame()
         {
-            lblKolejkaActive.Text = "";
-            Kolejka = 1;
+            Random random = new Random();
+            int losuj = random.Next(2);
+
+            if (losuj != 1)
+            {
+                Kolejka = 0;
+                lblKolejkaActive.Text = "Zaczyna O";
+            }
+            else
+            {
+                Kolejka = 1;
+                lblKolejkaActive.Text = "Zaczyna X";
+            }
+
             BtnClicked1 = 0; BtnClicked2 = 0; BtnClicked3 = 0; BtnClicked4 = 0; BtnClicked5 = 0; BtnClicked6 = 0; BtnClicked7 = 0; BtnClicked8 = 0; BtnClicked9 = 0;
             btn1.Text = "";
             btn2.Text = "";
@@ -585,8 +611,8 @@ namespace tictactoe_playervsplayer
 
         public void btnRestart_Click(object sender, EventArgs e)
         {
-            lblScoreO.Text = "";
-            lblScoreX.Text = "";
+            lblScoreO.Text = "0";
+            lblScoreX.Text = "0";
             kolko = 0;
             krzyzyk = 0;
             RestartGame();

@@ -177,7 +177,7 @@
             this.lblKolejkaActive.Name = "lblKolejkaActive";
             this.lblKolejkaActive.Size = new System.Drawing.Size(213, 45);
             this.lblKolejkaActive.TabIndex = 11;
-            this.lblKolejkaActive.Text = "Zaczyna X";
+            this.lblKolejkaActive.Text = "Zaczyna O";
             this.lblKolejkaActive.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblWyniki
